@@ -68,25 +68,62 @@
                             </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wgj-Cb-3BW">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="9Cs-ZX-XTu"/>
+                                </constraints>
                                 <items>
                                     <navigationItem title="Weather App" id="yUH-kZ-Vd1"/>
                                 </items>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9Cs-ZX-XTu"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="9Cs-ZX-XTu"/>
+                                    </mask>
+                                </variation>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryw-Z9-M8f">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <color key="backgroundColor" red="0.40784313729999999" green="0.66274509800000003" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="243" id="sTe-t3-30r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="sTe-t3-30r"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="sTe-t3-30r"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ryw-Z9-M8f" firstAttribute="top" secondItem="zVe-Dh-rZZ" secondAttribute="bottom" constant="57" id="2DJ-Xn-1mr"/>
                             <constraint firstItem="jSe-bM-vxM" firstAttribute="top" secondItem="Yk0-Fw-Ivz" secondAttribute="bottom" constant="22" id="2IY-jD-ABQ"/>
                             <constraint firstItem="jSe-bM-vxM" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4iI-KQ-1dn"/>
                             <constraint firstItem="zVe-Dh-rZZ" firstAttribute="top" secondItem="jSe-bM-vxM" secondAttribute="bottom" constant="34" id="6Qo-F5-1tZ"/>
-                            <constraint firstItem="zVe-Dh-rZZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6jo-bc-yST"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ryw-Z9-M8f" secondAttribute="bottom" constant="78" id="7SQ-Qc-NgI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Yk0-Fw-Ivz" secondAttribute="trailing" constant="126" id="Bj6-GT-2Dh"/>
                             <constraint firstItem="jSe-bM-vxM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="DNX-YV-fYg"/>
+                            <constraint firstItem="ryw-Z9-M8f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="G5t-4Q-BFu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Wgj-Cb-3BW" secondAttribute="trailing" constant="-20" id="IrG-QA-oxl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zVe-Dh-rZZ" secondAttribute="trailing" constant="122" id="M51-G0-9Su"/>
                             <constraint firstItem="Wgj-Cb-3BW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="SMu-KH-pIt"/>
                             <constraint firstItem="zVe-Dh-rZZ" firstAttribute="top" secondItem="jSe-bM-vxM" secondAttribute="bottom" constant="34" id="TeE-1i-ehz"/>
                             <constraint firstItem="jSe-bM-vxM" firstAttribute="top" secondItem="Yk0-Fw-Ivz" secondAttribute="bottom" constant="22" id="Wil-0f-CHp"/>
                             <constraint firstItem="Wgj-Cb-3BW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="XRP-D0-r04"/>
                             <constraint firstItem="Yk0-Fw-Ivz" firstAttribute="top" secondItem="Wgj-Cb-3BW" secondAttribute="bottom" constant="21" id="qcd-Sa-dBO"/>
+                            <constraint firstItem="ryw-Z9-M8f" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="vLj-UE-Imi"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -94,20 +131,25 @@
                                 <exclude reference="Yk0-Fw-Ivz"/>
                                 <exclude reference="zVe-Dh-rZZ"/>
                                 <exclude reference="Wgj-Cb-3BW"/>
+                                <exclude reference="ryw-Z9-M8f"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="IrG-QA-oxl"/>
+                                <exclude reference="SMu-KH-pIt"/>
+                                <exclude reference="XRP-D0-r04"/>
                                 <exclude reference="2IY-jD-ABQ"/>
                                 <exclude reference="4iI-KQ-1dn"/>
                                 <exclude reference="DNX-YV-fYg"/>
                                 <exclude reference="Wil-0f-CHp"/>
-                                <exclude reference="6Qo-F5-1tZ"/>
-                                <exclude reference="6jo-bc-yST"/>
-                                <exclude reference="TeE-1i-ehz"/>
                                 <exclude reference="Bj6-GT-2Dh"/>
                                 <exclude reference="qcd-Sa-dBO"/>
-                                <exclude reference="IrG-QA-oxl"/>
-                                <exclude reference="SMu-KH-pIt"/>
-                                <exclude reference="XRP-D0-r04"/>
+                                <exclude reference="6Qo-F5-1tZ"/>
+                                <exclude reference="M51-G0-9Su"/>
+                                <exclude reference="TeE-1i-ehz"/>
+                                <exclude reference="2DJ-Xn-1mr"/>
+                                <exclude reference="G5t-4Q-BFu"/>
+                                <exclude reference="vLj-UE-Imi"/>
+                                <exclude reference="7SQ-Qc-NgI"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -116,24 +158,30 @@
                                 <include reference="Yk0-Fw-Ivz"/>
                                 <include reference="zVe-Dh-rZZ"/>
                                 <include reference="Wgj-Cb-3BW"/>
+                                <include reference="ryw-Z9-M8f"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="IrG-QA-oxl"/>
+                                <include reference="SMu-KH-pIt"/>
+                                <include reference="XRP-D0-r04"/>
                                 <include reference="2IY-jD-ABQ"/>
                                 <include reference="4iI-KQ-1dn"/>
                                 <include reference="DNX-YV-fYg"/>
                                 <include reference="Wil-0f-CHp"/>
-                                <include reference="6Qo-F5-1tZ"/>
-                                <include reference="6jo-bc-yST"/>
-                                <include reference="TeE-1i-ehz"/>
                                 <include reference="Bj6-GT-2Dh"/>
                                 <include reference="qcd-Sa-dBO"/>
-                                <include reference="IrG-QA-oxl"/>
-                                <include reference="SMu-KH-pIt"/>
-                                <include reference="XRP-D0-r04"/>
+                                <include reference="6Qo-F5-1tZ"/>
+                                <include reference="M51-G0-9Su"/>
+                                <include reference="TeE-1i-ehz"/>
+                                <include reference="2DJ-Xn-1mr"/>
+                                <include reference="G5t-4Q-BFu"/>
+                                <include reference="vLj-UE-Imi"/>
+                                <include reference="7SQ-Qc-NgI"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="resultLabel" destination="ryw-Z9-M8f" id="bi0-pG-9aC"/>
                         <outlet property="searchbox" destination="jSe-bM-vxM" id="7uJ-KT-gjJ"/>
                     </connections>
                 </viewController>
