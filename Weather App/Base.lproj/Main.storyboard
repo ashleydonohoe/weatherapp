@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jSe-bM-vxM">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8sl-hQ-uCQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8sl-hQ-uCQ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="8sl-hQ-uCQ"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type your city" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yk0-Fw-Ivz">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="108" id="LZY-je-g9S"/>
+                                    <constraint firstAttribute="height" constant="21" id="S5h-nf-1Yn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="LZY-je-g9S"/>
+                                        <exclude reference="S5h-nf-1Yn"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="LZY-je-g9S"/>
+                                        <include reference="S5h-nf-1Yn"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVe-Dh-rZZ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Get Weather Info"/>
+                                <connections>
+                                    <action selector="getWeatherInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="juD-Pt-703"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wgj-Cb-3BW">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Weather App" id="yUH-kZ-Vd1"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jSe-bM-vxM" firstAttribute="top" secondItem="Yk0-Fw-Ivz" secondAttribute="bottom" constant="22" id="2IY-jD-ABQ"/>
+                            <constraint firstItem="jSe-bM-vxM" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4iI-KQ-1dn"/>
+                            <constraint firstItem="zVe-Dh-rZZ" firstAttribute="top" secondItem="jSe-bM-vxM" secondAttribute="bottom" constant="34" id="6Qo-F5-1tZ"/>
+                            <constraint firstItem="zVe-Dh-rZZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6jo-bc-yST"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Yk0-Fw-Ivz" secondAttribute="trailing" constant="126" id="Bj6-GT-2Dh"/>
+                            <constraint firstItem="jSe-bM-vxM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="DNX-YV-fYg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Wgj-Cb-3BW" secondAttribute="trailing" constant="-20" id="IrG-QA-oxl"/>
+                            <constraint firstItem="Wgj-Cb-3BW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="SMu-KH-pIt"/>
+                            <constraint firstItem="zVe-Dh-rZZ" firstAttribute="top" secondItem="jSe-bM-vxM" secondAttribute="bottom" constant="34" id="TeE-1i-ehz"/>
+                            <constraint firstItem="jSe-bM-vxM" firstAttribute="top" secondItem="Yk0-Fw-Ivz" secondAttribute="bottom" constant="22" id="Wil-0f-CHp"/>
+                            <constraint firstItem="Wgj-Cb-3BW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="XRP-D0-r04"/>
+                            <constraint firstItem="Yk0-Fw-Ivz" firstAttribute="top" secondItem="Wgj-Cb-3BW" secondAttribute="bottom" constant="21" id="qcd-Sa-dBO"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="jSe-bM-vxM"/>
+                                <exclude reference="Yk0-Fw-Ivz"/>
+                                <exclude reference="zVe-Dh-rZZ"/>
+                                <exclude reference="Wgj-Cb-3BW"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="2IY-jD-ABQ"/>
+                                <exclude reference="4iI-KQ-1dn"/>
+                                <exclude reference="DNX-YV-fYg"/>
+                                <exclude reference="Wil-0f-CHp"/>
+                                <exclude reference="6Qo-F5-1tZ"/>
+                                <exclude reference="6jo-bc-yST"/>
+                                <exclude reference="TeE-1i-ehz"/>
+                                <exclude reference="Bj6-GT-2Dh"/>
+                                <exclude reference="qcd-Sa-dBO"/>
+                                <exclude reference="IrG-QA-oxl"/>
+                                <exclude reference="SMu-KH-pIt"/>
+                                <exclude reference="XRP-D0-r04"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="jSe-bM-vxM"/>
+                                <include reference="Yk0-Fw-Ivz"/>
+                                <include reference="zVe-Dh-rZZ"/>
+                                <include reference="Wgj-Cb-3BW"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="2IY-jD-ABQ"/>
+                                <include reference="4iI-KQ-1dn"/>
+                                <include reference="DNX-YV-fYg"/>
+                                <include reference="Wil-0f-CHp"/>
+                                <include reference="6Qo-F5-1tZ"/>
+                                <include reference="6jo-bc-yST"/>
+                                <include reference="TeE-1i-ehz"/>
+                                <include reference="Bj6-GT-2Dh"/>
+                                <include reference="qcd-Sa-dBO"/>
+                                <include reference="IrG-QA-oxl"/>
+                                <include reference="SMu-KH-pIt"/>
+                                <include reference="XRP-D0-r04"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="searchbox" destination="jSe-bM-vxM" id="7uJ-KT-gjJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.5" y="429"/>
+        </scene>
+    </scenes>
+</document>
